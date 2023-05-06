@@ -174,7 +174,7 @@ touch preferences.txt
   
 ---
 
-### 12. Отправить сразу 2 файла на внешний репозиторий.
+### 12, 13. Сделать коммит в одну строку; Отправить сразу 2 файла на внешний репозиторий.
   ```
   git add . 
   
@@ -203,3 +203,66 @@ To https://github.com/Kr0k0d/TXT.git
 
 
   ```
+### 14. На веб интерфейсе создать файл bug_report.txt.
+Для этого нужно открыть GitHub, перейти в репозиторий,  нажать на кнопку "Add file" и выбрать "Create new file". Добавляем bag report
+```
+id: 404
+Name: Ошибка при загрузке страницы.
+Description: При попытке загрузить страницу, браузер выдает ошибку "404 Not Found". Это происходит на всех страницах сайта, не только на одной.
+Environment: Windows 10 Chrome.
+Reproduction: Открыть любую страницу на сайте и попытаться ее загрузить.
+Expected result: Страница должна загрузиться без ошибок.
+Current result: Браузер выдал ошибку "404 Not Found".
+```
+
+### 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+Нажимаем на кнопку "Commit changes".
+
+### 16.На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+Через GitHub внести изменение в файл bug_report.txt
+```
+Priority: hight
+```
+### 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
+Как и в пункте 14 коммитим изменения
+
+### 18. Синхронизировать внешний и локальный репозиторий TXT
+
+Сохранить изменение на компьютере, помодет команда 
+
+Я до этого уже сохранял изменения, поэтому у меня два вывода
+```
+git pull
+```
+_Вывод_
+```
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 4.35 KiB | 78.00 KiB/s, done.
+From https://github.com/Kr0k0d/TXT
+   e0b999c..29f5d67  main       -> origin/main
+Updating e0b999c..29f5d67
+Fast-forward
+ README.md      | 206 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ bug_report.txt |   7 ++
+ 2 files changed, 212 insertions(+), 1 deletion(-)
+ create mode 100644 bug_report.txt
+
+```
+
+```
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 676 bytes | 33.00 KiB/s, done.
+From https://github.com/Kr0k0d/TXT
+   29f5d67..cfa2300  main       -> origin/main
+Updating 29f5d67..cfa2300
+Fast-forward
+ bug_report.txt | 1 +
+ 1 file changed, 1 insertion(+)
+```
